@@ -1,0 +1,129 @@
+/* =============== GLOBAL =============== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+  background: #f5f7fa;
+  color: #222;
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* =============== FORM =============== */
+form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e7e7e7;
+}
+
+.row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.field {
+  margin-bottom: 16px;
+  flex: 1;
+  min-width: 220px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  border-color: #0a79df;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(10, 121, 223, 0.15);
+}
+
+/* =============== ERROR MESSAGE =============== */
+.error {
+  color: #d32f2f;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  height: 14px;
+}
+
+/* =============== BUTTONS / STATUS =============== */
+.controls {
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+button { 
+  width: 100%;
+  padding: 12px 20px;
+  background: #0a79df;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  transition: background 0.25s ease;
+}
+
+button:hover:not([disabled]) {
+  background: #096ac5;
+}
+
+button[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+#status {
+    margin-top: 20px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 600px) {
+  body {
+    padding: 14px;
+  }
+  form {
+    padding: 16px;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+}

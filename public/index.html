@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pay Now - Razorpay</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Pay Now (Test)</h1>
+    <p class="hint">Enter details below and click <strong>Pay Now</strong>. (Test mode only — use test card 4111 1111 1111 1111)</p>
+
+    <form id="paymentForm" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+          <div class="error" id="error-name" aria-live="polite"></div>
+        </div>
+
+        <div class="field">
+          <label for="contact">Contact (10 digit) *</label>
+          <input id="contact" name="contact" type="tel" inputmode="numeric" pattern="[0-9]*" placeholder="9999999999" required />
+          <div class="error" id="error-contact" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+          <div class="error" id="error-email" aria-live="polite"></div>
+        </div>
+
+        <div class="field">
+          <label for="amount">Amount (INR) *</label>
+          <input id="amount" name="amount" type="number" step="0.01" min="1" placeholder="100.00" required />
+          <div class="error" id="error-amount" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="payBtn" type="button" disabled>Pay Now</button>
+        <div id="status" class="small">Not ready</div>
+      </div>
+    </form>
+
+    <!-- Razorpay checkout script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+    <!-- Your app script (external, no inline JS) -->
+    <script src="./main.js" defer></script>
+  </body>
+</html>
